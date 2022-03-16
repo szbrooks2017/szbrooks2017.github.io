@@ -47,34 +47,29 @@ function addStar(){
 Array(200).fill().forEach(addStar);
 
 // Import texture for space
-const spaceTexture = new THREE.TextureLoader().load('/Assets/Images/space.jpg');
+const spaceTexture = new THREE.TextureLoader().load('/Assets/Images/cyber-grid.png');
 scene.background = spaceTexture;
 
 // Avatar
-const stratTexture = new THREE.TextureLoader().load('/Assets/Images/2020_profile.png');
-const strat = new THREE.Mesh(
-  new THREE.BoxGeometry(3, 3, 3),
-  new THREE.MeshBasicMaterial({map: stratTexture})
-)
-scene.add(strat);
+// const stratTexture = new THREE.TextureLoader().load('/Assets/Images/2020_profile.png');
+// const strat = new THREE.Mesh(
+//   new THREE.BoxGeometry(3, 3, 3),
+//   new THREE.MeshBasicMaterial({map: stratTexture})
+// )
+// scene.add(strat);
+const cube = new THREE.Mesh(new THREE.BoxGeometry(3, 3, 3), new THREE.MeshStandardMaterial({color: 0xFF6347, wireframe: true}))
+scene.add(cube);
 
 // Moon
-const moonTexture = new THREE.TextureLoader().load('/Assets/Images/moon.jpg');
-const normalTexture = new THREE.TextureLoader().load('/Assets/Images/normal.jpg');
-const moon = new THREE.Mesh(
-  new THREE.SphereGeometry(3, 32, 32),
-  new THREE.MeshStandardMaterial({
-      map: moonTexture,
-      normalMap: normalTexture,
-    })
-)
+// const moonTexture = new THREE.TextureLoader().load('/Assets/Images/moon.jpg');
+// const normalTexture = new THREE.TextureLoader().load('/Assets/Images/normal.jpg');
+const moon = new THREE.Mesh(new THREE.SphereGeometry(3, 32, 32), new THREE.MeshStandardMaterial({color: 0xFF6347, wireframe: true}))
 scene.add(moon);
-moon.position.z = 30;
-moon.position.setX(-8);
+moon.position.set(-4.5, 0, 27);
 console.log(moon);
 
-strat.position.z = -5;
-strat.position.x = 2;
+cube.position.z = -5;
+cube.position.x = 2;
 
 // Camera Controls
 function moveCamera(){
@@ -83,8 +78,8 @@ function moveCamera(){
   moon.rotation.y += 0.075;
   moon.rotation.z += 0.05;
 
-  strat.rotation.y += 0.01;
-  strat.rotation.z += 0.01;
+  cube.rotation.y += 0.01;
+  cube.rotation.z += 0.01;
 
   camera.position.z = t * -0.01;
   camera.position.x = t * -0.0002;
