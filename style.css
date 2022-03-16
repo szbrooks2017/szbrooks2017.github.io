@@ -44,71 +44,96 @@ canvas {
 
 
 
-  header {
-    background: var(--dark-bg);
-    grid-column: 2 / span 5;
-    font-size: 2.5rem;
-    padding: 2rem;
-    margin-bottom: var(--spacing);
-  }
+header {
+  background: var(--dark-bg);
+  grid-column: 2 / span 5;
+  font-size: 2.5rem;
+  padding: 2rem;
+  margin-bottom: var(--spacing);
+}
 
-  section {
-    grid-column: 2 / 8;
-    padding: 1rem;
-    background: var(--dark-bg);
-    font-size: 1.25rem;
-    line-height: 1.5;
-    margin-bottom: var(--spacing);
-  }
+section {
+  grid-column: 2 / 8;
+  padding: 1rem;
+  background: var(--dark-bg);
+  font-size: 1.25rem;
+  line-height: 1.5;
+  margin-bottom: var(--spacing);
+}
 
-  blockquote {
-    margin: 0;
-    padding: 0;
-    grid-column: 2 / span 9;
-    margin-bottom: var(--spacing);
-  }
+blockquote {
+  margin: 0;
+  padding: 0;
+  grid-column: 2 / span 9;
+  margin-bottom: var(--spacing);
+}
 
-  blockquote p {
-    color: black;
-    background-color: white;
-    font-size: 4rem;
-    display: inline;
-    line-height: 1;
-  }
+blockquote p {
+  color: black;
+  background-color: white;
+  font-size: 4rem;
+  display: inline;
+  line-height: 1;
+}
 
-  .left {
-    grid-column: 6 / 12;
-  }
+.left {
+  grid-column: 6 / 12;
+}
 
-  .me{
-    height: 500px;
-    width: 700px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 8px;
-  }
+.me{
+  height: 500px;
+  width: 700px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 15px;
+  border-radius: 8px;
+}
 
-  .footer-logo img{
-    width: 40px;
-    height: 40px;
-  }
-  .footer-logo li{
-    padding: 0 .5em;
-    display: inline;
-  }
-  
-  .footer{
-    display: flex;
-    align-items: center;
-  }
-  
-  .footer ul{
-    flex-grow: 1;
-    text-align: end;
-  }
-  
-  .footer img:hover{
-    background-color: rgba(255, 255, 255, .3)
+.footer-logo img{
+  width: 40px;
+  height: 40px;
+}
+.footer-logo li{
+  padding: 0 .5em;
+  display: inline;
+}
 
-  }
+.footer{
+  display: flex;
+  align-items: center;
+}
+
+.footer ul{
+  flex-grow: 1;
+  text-align: end;
+}
+
+.footer img:hover{
+  background-color: rgba(255, 255, 255, .3)
+
+}
+button {
+  background: none;
+  color: #ffa260;
+  border: 2px solid;
+  font: inherit;
+  line-height: 1;
+  margin: 0.5em;
+  padding: 1em 2em;
+  transition: 0.25s;
+}
+
+.raise:hover,
+.raise:focus {
+  box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+  transform: translateY(-0.25em);
+}
+.raise {
+  --color: #ffa260;
+  --hover: #e5ff60;
+}
+button:hover{
+  color: #e4cb58;
+  cursor: pointer;
+}
