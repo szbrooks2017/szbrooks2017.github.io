@@ -21,7 +21,7 @@ renderer.render(scene, camera);
 
 // objects
 const geometry = new THREE.TorusGeometry(10, 3, 16, 100);
-const material = new THREE.MeshStandardMaterial({color: 0xFF6347});
+const material = new THREE.MeshStandardMaterial({color: 0xFF6347, wireframe: true});
 const torus = new THREE.Mesh(geometry, material);
 scene.add(torus);
 
@@ -71,6 +71,7 @@ const moon = new THREE.Mesh(
 scene.add(moon);
 moon.position.z = 30;
 moon.position.setX(-8);
+console.log(moon);
 
 strat.position.z = -5;
 strat.position.x = 2;
