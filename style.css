@@ -87,6 +87,10 @@ blockquote p {
   padding-top: 15px;
   border-radius: 8px;
 }
+.project{
+  max-width: 100%;
+  height: auto;
+}
 
 /* Footer Navigation Bar*/
 .footer-logo img{

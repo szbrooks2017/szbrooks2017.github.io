@@ -25,6 +25,12 @@ const material = new THREE.MeshStandardMaterial({color: 0xFF6347, wireframe: tru
 const torus = new THREE.Mesh(geometry, material);
 scene.add(torus);
 
+const torusgeometry = new THREE.TorusGeometry(10, 3, 16, 100);
+const torusmaterial = new THREE.MeshStandardMaterial({color: 0xFF6347, wireframe: true});
+const torus1 = new THREE.Mesh(torusgeometry, torusmaterial);
+torus1.position.set(-4.5, 0, 55);
+scene.add(torus1);
+
 // lights
 const pointLight = new THREE.PointLight(0xffffff);
 pointLight.position.set(5, 5, 5);
