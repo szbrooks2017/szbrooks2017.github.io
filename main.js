@@ -50,15 +50,24 @@ Array(200).fill().forEach(addStar);
 const spaceTexture = new THREE.TextureLoader().load('/Assets/Images/cyber-grid.png');
 scene.background = spaceTexture;
 
-// Avatar
-// const stratTexture = new THREE.TextureLoader().load('/Assets/Images/2020_profile.png');
-// const strat = new THREE.Mesh(
-//   new THREE.BoxGeometry(3, 3, 3),
-//   new THREE.MeshBasicMaterial({map: stratTexture})
-// )
-// scene.add(strat);
-const cube = new THREE.Mesh(new THREE.BoxGeometry(3, 3, 3), new THREE.MeshStandardMaterial({color: 0xFF6347, wireframe: true}))
-scene.add(cube);
+const x = 0, y = 0;
+
+const heartShape = new THREE.Shape();
+
+heartShape.moveTo( x + 5, y + 5 );
+heartShape.bezierCurveTo( x + 5, y + 5, x + 4, y, x, y );
+heartShape.bezierCurveTo( x - 6, y, x - 6, y + 7,x - 6, y + 7 );
+heartShape.bezierCurveTo( x - 6, y + 11, x - 3, y + 15.4, x + 5, y + 19 );
+heartShape.bezierCurveTo( x + 12, y + 15.4, x + 16, y + 11, x + 16, y + 7 );
+heartShape.bezierCurveTo( x + 16, y + 7, x + 16, y, x + 10, y );
+heartShape.bezierCurveTo( x + 7, y, x + 5, y + 5, x + 5, y + 5 );
+
+const heartGeometry = new THREE.ShapeGeometry( heartShape );
+const heartMaterial = new THREE.MeshBasicMaterial( { color: 0xFF6347 } );
+const heartMesh = new THREE.Mesh( heartGeometry, heartMaterial ) ;
+scene.add( heartMesh );
+// const cube = new THREE.Mesh(new THREE.BoxGeometry(3, 3, 3), new THREE.MeshStandardMaterial({color: 0xFF6347, wireframe: true}))
+// scene.add(cube);
 
 // Moon
 // const moonTexture = new THREE.TextureLoader().load('/Assets/Images/moon.jpg');
@@ -68,8 +77,8 @@ scene.add(moon);
 moon.position.set(-4.5, 0, 27);
 console.log(moon);
 
-cube.position.z = -5;
-cube.position.x = 2;
+heartMesh.position.z = -11;
+heartMesh.position.x = 2;
 
 // Camera Controls
 function moveCamera(){
@@ -78,8 +87,8 @@ function moveCamera(){
   moon.rotation.y += 0.075;
   moon.rotation.z += 0.05;
 
-  cube.rotation.y += 0.01;
-  cube.rotation.z += 0.01;
+  // heartMesh.rotation.y += 0.01;
+  heartMesh.rotation.z -= 0.01;
 
   camera.position.z = t * -0.01;
   camera.position.x = t * -0.0002;
