@@ -80,6 +80,12 @@ console.log(moon);
 heartMesh.position.z = -11;
 heartMesh.position.x = 2;
 
+// Ring
+const ringgeometry = new THREE.RingGeometry( 1, 5, 45 );
+const ringmaterial = new THREE.MeshBasicMaterial( { color: 0xffff00, side: THREE.DoubleSide, wireframe: true} );
+const ringmesh = new THREE.Mesh( ringgeometry, ringmaterial );
+ringmesh.position.set(4, 0, 41);
+scene.add( ringmesh );
 // Camera Controls
 function moveCamera(){
   const t = document.body.getBoundingClientRect().top;
@@ -103,6 +109,10 @@ function animate(){
   torus.rotation.x += 0.001;
   torus.rotation.y += 0.0005;
   torus.rotation.z += 0.001;
+
+  ringmesh.rotation.x += 0.001;
+  ringmesh.rotation.y += 0.0005;
+  ringmesh.rotation.z += 0.001;
   // controls.update();
   renderer.render(scene, camera);
 }
