@@ -59,6 +59,8 @@ section {
   background: var(--dark-bg);
   font-size: 1.25rem;
   line-height: 1.5;
+  width: 100%;
+  height: auto;
   margin-bottom: var(--spacing);
 }
 
