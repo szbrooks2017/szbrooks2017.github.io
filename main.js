@@ -50,7 +50,7 @@ function addStar(){
   star.position.set(x, y, z);
   scene.add(star);
 }
-Array(200).fill().forEach(addStar);
+Array(250).fill().forEach(addStar);
 
 // Import texture for space
 const spaceTexture = new THREE.TextureLoader().load('/Assets/Images/cyber-grid.png');
