@@ -16,7 +16,7 @@ canvas {
   font-style: normal;
 }
 
-
+/* General Layout*/
 main {
   width: 100vw;
   color: white;
@@ -41,8 +41,6 @@ canvas {
   top: 0;
   left: 0;
 }
-
-
 
 header {
   background: var(--dark-bg);
@@ -80,6 +78,7 @@ blockquote p {
   grid-column: 6 / 12;
 }
 
+/* My profile pic*/
 .me{
   height: 500px;
   width: 700px;
@@ -90,6 +89,7 @@ blockquote p {
   border-radius: 8px;
 }
 
+/* Footer Navigation Bar*/
 .footer-logo img{
   width: 40px;
   height: 40px;
@@ -113,6 +113,8 @@ blockquote p {
   background-color: rgba(255, 255, 255, .3)
 
 }
+
+/* Buttons */
 button {
   background: none;
   color: #ffa260;
