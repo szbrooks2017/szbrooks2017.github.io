@@ -38,7 +38,7 @@ const ambientLight = new THREE.AmbientLight(0xffffff);
 scene.add(pointLight, ambientLight);
 
 // Mouse Controls
-const controls = new OrbitControls(camera, renderer.domElement);
+// const controls = new OrbitControls(camera, renderer.domElement);
 
 // Space background
 /// Star method to randomly generate a star
@@ -56,6 +56,14 @@ Array(250).fill().forEach(addStar);
 const spaceTexture = new THREE.TextureLoader().load('/Assets/Images/cyber-grid.png');
 scene.background = spaceTexture;
 
+// grid for background
+// const gridgeometry = new THREE.PlaneGeometry( 1, 1 );
+// const gridmaterial = new THREE.MeshBasicMaterial( {color: 0xffff00, side: THREE.DoubleSide, wireframe: true} );
+// const plane = new THREE.Mesh( gridgeometry, gridmaterial );
+// plane.wireframeLinewidth = 4;
+// scene.add( plane );
+
+// heart
 const x = 0, y = 0;
 
 const heartShape = new THREE.Shape();

@@ -47,6 +47,7 @@ header {
   margin-bottom: var(--spacing);
 }
 
+
 section {
   grid-column: 2 / 8;
   padding: 1rem;
@@ -99,7 +100,7 @@ blockquote p {
   
 }
 .footer-logo li{
-  padding: 0 .5em;
+  /* padding: 0 .5em; */
   display: inline;
 }
 
@@ -142,4 +143,21 @@ button {
 button:hover{
   color: #e4cb58;
   cursor: pointer;
+}
+
+@media screen and (max-width: 567px) {
+  .left {
+    grid-column: 1 / 12;
+  }
+  .light {
+    grid-column: 1 / 12;
+  }
+  header {
+    grid-column: 1 / 12;
+    font-size: 1.5rem;
+
+  }
+  .footer {
+    grid-column: 1 / 12;
+  }
 }
