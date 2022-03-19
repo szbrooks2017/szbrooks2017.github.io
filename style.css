@@ -100,7 +100,6 @@ blockquote p {
   
 }
 .footer-logo li{
-  /* padding: 0 .5em; */
   display: inline;
 }
 
@@ -112,6 +111,7 @@ blockquote p {
 .footer ul{
   flex-grow: 1;
   text-align: end;
+  padding-left: .5em;
 }
 
 .footer img:hover{
