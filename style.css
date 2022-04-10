@@ -160,4 +160,9 @@ button:hover{
   .footer {
     grid-column: 1 / 12;
   }
+  .footer-logo img{
+    width: 30px;
+    height: 30px;
+    
+  }
 }
